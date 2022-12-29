@@ -1,0 +1,14 @@
+1 #!/bin/bash
+ 2
+ 3 #Writ a script to check whether your ram is less than 1 gb
+ 4
+ 5 ram_size=$(free -gt | grep "Total" | awk '{print $4}')
+ 6
+ 7 #echo  "$ram_size"
+ 8
+ 9 if [ $ram_size -le 1 ] 
+10 then
+11         echo "Primary memeory is less than 1 GB. available memory : $ram_size GB."
+12 else
+13         echo "Need not to worry. available primary memory is : $ram_size GB."
+14 fi
